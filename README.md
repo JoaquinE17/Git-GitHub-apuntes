@@ -1,4 +1,4 @@
-Apuntes de Git-Github
+Apuntes de Git-GitHub
 ---------------------
 Dentro de estos archivos recordarás o aprenderás algunos comandos y reforzarás ciertos conocimientos de ***Git*** y ***GitHub***.  
 Te recomiendo seguir estos pasos:  
