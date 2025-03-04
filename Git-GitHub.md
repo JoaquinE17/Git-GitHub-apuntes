@@ -1,8 +1,10 @@
 GIT y GITHUB
 =====================
  ## COMENZANDO CON GITHUB
-   Crear una cuenta en GitHub:
+   Crear una cuenta en GitHub:  
+   
    > Entra a https://github.com y create una cuenta (sign up)
+
    Recuerda utilizar la misma direccion de correo electronico que utilizo en la configuracion de git.
 
    ### CREAR UN REPOSITORIO EN GITHUB:
