@@ -47,7 +47,7 @@ GIT y GITHUB
     4. **`master`**: Es el nombre de la rama que estás empujando. En muchos repositorios antiguos, `master` es la rama principal, aunque en algunos repositorios más nuevos ahora se usa `main` como nombre por defecto. Este comando indica que estás empujando tus cambios a la rama `master` del repositorio remoto.
     
     > ¿Qué hace el comando completo?
-       Este comando empuja los cambios de la rama local `master` hacia el repositorio remoto llamado `origin` y, al mismo tiempo, establece una relación de seguimiento (upstream) entre tu rama local `master` y la rama remota `master`. Esto significa que, después de ejecutar este comando, cuando uses simplemente `git push` o `git pull` en el futuro, Git sabrá a qué rama remota se debe conectar automáticamente.
+       **Este comando empuja los cambios de la rama local `master` hacia el repositorio remoto llamado `origin` y, al mismo tiempo, establece una relación de seguimiento (upstream) entre tu rama local `master` y la rama remota `master`. Esto significa que, después de ejecutar este comando, cuando uses simplemente `git push` o `git pull` en el futuro, Git sabrá a qué rama remota se debe conectar automáticamente.**
       
        Por ejemplo, si aún no habías vinculado la rama `master` a la remota, después de ejecutar este comando, ya podrás hacer `git push` sin necesidad de especificar `origin master` cada vez.
    ~~~
