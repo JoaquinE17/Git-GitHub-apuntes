@@ -64,7 +64,6 @@ GITHUB CONTRIBUTE
         5|  Date:   Fri Mar 26 15:44:10 2021 +0100
         6|  
         7|      Merge branch 'master' of https://github.com/w3schools-test/hello-world
-        
         8|  commit e7de78fdefdda51f6f961829fcbdf197e9b926b6
         9|  Author: w3schools-test 
        10|  Date:   Fri Mar 26 15:37:22 2021 +0100
@@ -110,7 +109,8 @@ GITHUB CONTRIBUTE
 
    > [NOTA] : De acuerdo con las convenciones de nomenclatura de _Git_, se recomienda nombrar tu propio repositorio 'origin', y el que has bifurcado (fork) para 'upstream'  
    
-   * Ahora tenemos 2 remotos:
-    'origin' - nuestropropio fork, donde tenemos acceso de lectura y escritura
-    'upstream' - el original, donde tenemos acceso de solo lectura
+   * Ahora tenemos 2 remotos:  
+     - 'origin' - nuestropropio fork, donde tenemos acceso de lectura y escritura  
+     - 'upstream' - el original, donde tenemos acceso de solo lectura
+       
    Ahora vamos a hacer algunos cambios en el codigo en el codigo. Mas adelante cubriremos cómo sugerimos esos cambios al repositorio original.  
