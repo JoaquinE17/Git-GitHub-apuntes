@@ -59,21 +59,21 @@ GITHUB PAGES
 
    Este repositorio necesita un nombre especial para funcionar como pagina de GitHub. Tiene que ser tu nombre de eusuario de GitHub, seguido por '.github.io'.  
 
-   > [Ejemplo] : example_name/example_test.github.io  
+   > [Ejemplo] : ejemplo_prueba/ejemplo_prueba.github.io  
 
   ### PUSH - REPOSITORIO LOCAL A GITHUB PAGES:
    Añadimos este nuevo repositorio como remoto para nuestro repositorio local, lo vamos a llamar 'pagina-gh' (para GitHub Pages).  
 
-   > [Ejemplo] : Copia la URL producida por GitHub y añadelo como 'remote' en consola.  
+   > [NOTA] : Copia la URL producida por GitHub y añadelo como 'remote' en consola.  
 
    ~~~ git:
-   		1|	git remote add pagina-gh https://github.com/example_name/example_test.github.io
+ 	 	1|	git remote add pagina-gh https://github.com/example_name/example_test.github.io
    ~~~  
 
    Asegurate de que estás en la rama _master_, luego haz _push_ de la rama _master_ a la nueva rama remota.  
 
    ~~~ git:
-   		1|	git push gh-page master
+  	 	1|	git push gh-page master
 		2|	Enumerating objects: 33, done.
 		3|	Counting objects: 100% (33/33), done.
 		4|	Delta compression using up to 16 threads
@@ -82,7 +82,7 @@ GITHUB PAGES
 		7|	Total 33 (delta 18), reused 0 (delta 0), pack-reused 0
 		8|	remote: Resolving deltas: 100% (18/18), done.
 		9|	To https://github.com/w3schools-test/w3schools-test.github.io.git
-	   10|	 * [new branch]      master -> master
+	      10|	 * [new branch]      master -> master
    ~~~ 
 
    > [NOTA] : Si es la primera vez que te conectas a GitHub, recibiras algun tipo de documentacion para autenticar esta conexion.  
