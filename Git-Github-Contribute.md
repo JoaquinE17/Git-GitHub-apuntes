@@ -119,3 +119,34 @@ GITHUB CONTRIBUTE
      - 'upstream' - el original, donde solo tenemos acceso de lectura
        
    Ahora vamos a hacer algunos cambios en el codigo. Mas adelante cubriremos cómo sugerimos esos cambios al repositorio original.  
+
+ ## GITHUB ENVIAR UNA PULL REQUEST
+  ### ENVIAR CAMBIOS A NUESTRO GITHUB FORK:
+   Hemos hecho un monton de camfios en nuestro _Git_ local.  
+   Confirma los cambios:  
+   Ahora haremos PUSH a nuestro _GitHub Fork_:  
+
+   ~~~ git:
+          1|  git push origin
+          2|  Enumerating objects: 8, done.
+          3|  Counting objects: 100% (8/8), done.
+          4|  Delta compression using up to 16 threads
+          5|  Compressing objects: 100% (5/5), done.
+          6|  Writing objects: 100% (5/5), 393.96 KiB | 32.83 MiB/s, done.
+          7|  Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+          8|  To https://github.com/kaijim/1 w3schools-test.github.io.git
+          9|     facaeae..ebb1a5c  master -> master
+   ~~~
+
+   * Vamos a _GitHub_, y vemos que el repositorio tiene un nuevo 'commit'. Y podemos enviar una _Pull Request_ al repositorio original (contribute).  
+
+   * Haz click en él, y crea una _Pull Recuest_.  
+
+   * Recuerda añadir una explicación para los administradores.  
+
+   * Envia esa _Pull Recuest_.  
+
+  ### APROBANDO UNA PULL REQUEST:
+   Ahora cualquier miembro con acceso puede ver el _Pull Request_ cuando vea el repositorio original.  
+
+   * Pueden ver los cambios propuestos. Comentar los cambios y fusionar. Confirma. Y los cambios se fusionaran con la rama _master_ (repositorio original).
