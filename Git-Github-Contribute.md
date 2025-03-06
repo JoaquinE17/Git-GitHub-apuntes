@@ -8,7 +8,8 @@ GITHUB CONTRIBUTE
 
   ### FORK (bifurcar) UN REPOSITORIO:  
 
-   Un **fork** es una copia de un repositorio. Esto es útil cuando quieres contribuir al proyecto de otra persona o empezar tu propio proyecto basado en el suyo.  
+   Un **fork** es una copia de un repositorio.  
+   Esto es útil cuando quieres contribuir al proyecto de otra persona o empezar tu propio proyecto basado en el suyo.  
    **Fork** no es un comando de _Git_, sino algo que se ofrece en _GitHub_ y otros hosts de repositorios. Empecemos iniciando sesión en GitHub, y bifurkemos (fork) nuestro repositorio:  
     	https://github.com/JoaquinE17/prueba  
    Ahora tenemos nuestra propia copia de 'prueba' en Github. Veamos como añadir una copia local de esto para que podamos trabajar con ella.  
@@ -39,11 +40,12 @@ GITHUB CONTRIBUTE
         ./ prueba
    ~~~  
 
-   > [NOTA] : Para especificar una carpeta concreta a la que clonar, añade nombre de la carpeta despues de la URL  del repositorio:  
-   git clone https://github.com/ejemplo-prueba/ejemplo-prueba myfolder  
+   > [NOTA] : Si se quiere clonar en una carpeta concreta se debe especificar el nombre de esa carpeta, añadiendo el nombre de esa carpeta despues de la URL, del repositorio original, si este no existe se creara la carpeta:  
+   ~~~ git:
+        1|   git clone https://github.com/ejemplo-prueba/ejemplo-prueba myfolder  
+   ~~~ 
 
-
-   * Navegue hasta el nuevo directorio y compruebe el estado:  
+   * Navegue el nuevo directorio y compruebe el estado:  
 
    ~~~ bash:
         cd ejemplo-prueba
@@ -54,7 +56,7 @@ GITHUB CONTRIBUTE
         . nothing to commit, working tree clean
    ~~~  
 
-   * Y comprueba el registro para confirmar que tenemos los datos completos del repositorio:  
+   * Y comprueba el registro (log) para confirmar que tenemos los datos completos del repositorio:  
 
    ~~~ git:
         1|  git log
@@ -75,9 +77,10 @@ GITHUB CONTRIBUTE
 
    * Ahora tenemos una copia completa del repositorio original.  
 
-  ### CONFIGURACION REMOTA:  
-   Básicamente, tenemos una copia completa de un repositorio, en cuyo origen no se nos permite hacer cambios.  
-   Veamos cómo se configura remotamente desde _Git_.  
+  ### CONFIGURACION REMOTA (repo clonado):  
+   Básicamente, tenemos una copia completa de un repositorio, cuyo repositorio 'origin' no se nos permite hacer cambios.  
+
+   Veamos desde _Git_, cómo el repo remoto esta configurado:  
 
    ~~~ git:
         1|  git remote -v
@@ -85,8 +88,9 @@ GITHUB CONTRIBUTE
         3|  origin  https://github.com/w3schools-test/w3schools-test.github.io.git (push)
    ~~~  
 
-   Vemos que 'origin' está configurado para el repositorio original 'ejemplo-prueba', tambien queremos añadir nuestro propio fork.  
-   En primer lugar, renombramos el original origin remote:  
+   Vemos que 'origin' está configurado para el repositorio original 'ejemplo-prueba', pero ahora queremos añadirlo a nuestro propio fork (copia del repo original).  
+
+   En primer lugar, renombramos el el repositorio remoto original ['origin' -> 'upstream']:  
 
    ~~~ git:
         1|  git remote rename origin upstream
@@ -96,8 +100,9 @@ GITHUB CONTRIBUTE
    
    ~~~  
 
-   A continuacion, obten la URL de nuestro propio 'fork'.  
-   Y añadelo como 'origin':
+   A continuacion, obten la URL de nuestro propio 'fork' (copia del repo original) NO del original  
+   Y añadelo como 'origin':  
+
    ~~~ git:
         1|  git remote add origin https://github.com/kaijim/w3schools-test.github.io.git
         2|  git remote -v
@@ -107,10 +112,41 @@ GITHUB CONTRIBUTE
         6|  upstream        https://github.com/w3schools-test/w3schools-test.github.io.git (push)
    ~~~  
 
-   > [NOTA] : De acuerdo con las convenciones de nomenclatura de _Git_, se recomienda nombrar tu propio repositorio 'origin', y el que has bifurcado (fork) para 'upstream'  
+   > [NOTA] : De acuerdo con las convenciones de nomenclatura de _Git_, se recomienda nombrar tu propio repositorio 'origin', y el que has bifurcado (fork) como 'upstream'  
    
-   * Ahora tenemos 2 remotos:  
-     - 'origin' - nuestropropio fork, donde tenemos acceso de lectura y escritura  
-     - 'upstream' - el original, donde tenemos acceso de solo lectura
+   * Ahora tenemos 2 repositorios remotos:  
+     - 'origin' - nuestro propio fork, donde tenemos acceso de lectura y escritura  
+     - 'upstream' - el original, donde solo tenemos acceso de lectura
        
-   Ahora vamos a hacer algunos cambios en el codigo en el codigo. Mas adelante cubriremos cómo sugerimos esos cambios al repositorio original.  
+   Ahora vamos a hacer algunos cambios en el codigo. Mas adelante cubriremos cómo sugerimos esos cambios al repositorio original.  
+
+ ## GITHUB ENVIAR UNA PULL REQUEST
+  ### ENVIAR CAMBIOS A NUESTRO GITHUB FORK:
+   Hemos hecho un monton de camfios en nuestro _Git_ local.  
+   Confirma los cambios:  
+   Ahora haremos PUSH a nuestro _GitHub Fork_:  
+
+   ~~~ git:
+          1|  git push origin
+          2|  Enumerating objects: 8, done.
+          3|  Counting objects: 100% (8/8), done.
+          4|  Delta compression using up to 16 threads
+          5|  Compressing objects: 100% (5/5), done.
+          6|  Writing objects: 100% (5/5), 393.96 KiB | 32.83 MiB/s, done.
+          7|  Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+          8|  To https://github.com/kaijim/1 w3schools-test.github.io.git
+          9|     facaeae..ebb1a5c  master -> master
+   ~~~
+
+   * Vamos a _GitHub_, y vemos que el repositorio tiene un nuevo 'commit'. Y podemos enviar una _Pull Request_ al repositorio original (contribute).  
+
+   * Haz click en él, y crea una _Pull Recuest_.  
+
+   * Recuerda añadir una explicación para los administradores.  
+
+   * Envia esa _Pull Recuest_.  
+
+  ### APROBANDO UNA PULL REQUEST:
+   Ahora cualquier miembro con acceso puede ver el _Pull Request_ cuando vea el repositorio original.  
+
+   * Pueden ver los cambios propuestos. Comentar los cambios y fusionar. Confirma. Y los cambios se fusionaran con la rama _master_ (repositorio original).
