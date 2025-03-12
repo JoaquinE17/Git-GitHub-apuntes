@@ -35,10 +35,10 @@ GIT ADVANCED
   ### REGLAS PARA '.gitignore':  
    Estas son las reglas generales para la busqueda de patrones en archivos '.gitignore':  
 
-    > Ver el archivo [Git-Reglas de .gitignore][Rules_gitignore]
+   > Ver el archivo [Git-Reglas de .gitignore][Rules_gitignore]
 
-    #### LOCAL Y PERSONAL - GIT IGNORE - REGLAS:
-     Tambien es posible ignorar archivos o carpetas pero no mostrarlo en el archivo distribuido '.gitignore'.  
-     Este tipo de ignorados se especifican en el archivo '.git/into/exclude'. Funciona de la misma manera que '.gitignore' pero no se muestra a nadie mas.  
+  #### LOCAL Y PERSONAL - GIT IGNORE - REGLAS:
+   Tambien es posible ignorar archivos o carpetas pero no mostrarlo en el archivo distribuido '.gitignore'.  
+   Este tipo de ignorados se especifican en el archivo '.git/into/exclude'. Funciona de la misma manera que '.gitignore' pero no se muestra a nadie mas.  
 
 [Rules_gitignore]:./Rules_gitignore.md
