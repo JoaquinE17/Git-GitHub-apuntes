@@ -20,7 +20,7 @@ GITHUB CONTRIBUTE
    **Clone** es una copia completa de un repositorio, incluyendo todos los registros y versiones de los archivos.  
    Vuelve al repositorio original, haz click en el boton verde 'code' para obtener la URL para clonar.  
 
-   * Abre tu Git-bash y clona (_clone_) el repositorio:  
+   * Habre tu Git-bash y clona (_clone_) el repositorio:  
 
    ~~~ git:
         1|  git clone https://github.com/w3schools-test/w3schools-test.github.io.git
@@ -40,7 +40,7 @@ GITHUB CONTRIBUTE
         ./ prueba
    ~~~  
 
-   > [NOTA] : Si se quiere clonar en una carpeta concreta se debe especificar el nombre de esa carpeta, añadiendo el nombre de esa carpeta despues de la URL, del repositorio original, si este no existe se creara la carpeta:  
+   > [NOTA] : Si se quiere clonar en una carpeta concreta se debe especificar el nombre de esa carpeta, añadiendo el nombre de esa carpeta despues de la URL del repositorio original, si la carpeta no existe se creara la carpeta:  
    ~~~ git:
         1|   git clone https://github.com/ejemplo-prueba/ejemplo-prueba myfolder  
    ~~~ 
@@ -88,9 +88,9 @@ GITHUB CONTRIBUTE
         3|  origin  https://github.com/w3schools-test/w3schools-test.github.io.git (push)
    ~~~  
 
-   Vemos que 'origin' está configurado para el repositorio original 'ejemplo-prueba', pero ahora queremos añadirlo a nuestro propio fork (copia del repo original).  
+   Vemos que 'origin' está configurado para el repositorio original *w3schools-test*, pero ahora queremos añadirlo a nuestro propio fork (copia del repo original).  
 
-   En primer lugar, renombramos el el repositorio remoto original ['origin' -> 'upstream']:  
+   En primer lugar, renombramos el repositorio remoto original ['origin' -> 'upstream']:  
 
    ~~~ git:
         1|  git remote rename origin upstream
@@ -100,7 +100,7 @@ GITHUB CONTRIBUTE
    
    ~~~  
 
-   A continuacion, obten la URL de nuestro propio 'fork' (copia del repo original) NO del original  
+   A continuación, obten la URL de nuestro propio 'fork' *github.com/kaijim...* (copia del repo original) NO del original  
    Y añadelo como 'origin':  
 
    ~~~ git:
@@ -112,17 +112,17 @@ GITHUB CONTRIBUTE
         6|  upstream        https://github.com/w3schools-test/w3schools-test.github.io.git (push)
    ~~~  
 
-   > [NOTA] : De acuerdo con las convenciones de nomenclatura de _Git_, se recomienda nombrar tu propio repositorio 'origin', y el que has bifurcado (fork) como 'upstream'  
+   > [NOTA] : De acuerdo con las convenciones de nomenclatura de _Git_, se recomienda nombrar tu propio repositorio como 'origin', y el que has bifurcado (fork) como 'upstream' (repo original)  
    
    * Ahora tenemos 2 repositorios remotos:  
-     - 'origin' - nuestro propio fork, donde tenemos acceso de lectura y escritura  
-     - 'upstream' - el original, donde solo tenemos acceso de lectura
+     - 'origin' - [*github.com./kaijim/...*] nuestro propio fork, donde tenemos acceso de lectura y escritura  
+     - 'upstream' - [*github.com/w3schools-test/...*] el original, donde solo tenemos acceso de lectura
        
    Ahora vamos a hacer algunos cambios en el codigo. Mas adelante cubriremos cómo sugerimos esos cambios al repositorio original.  
 
  ## GITHUB ENVIAR UNA PULL REQUEST
   ### ENVIAR CAMBIOS A NUESTRO GITHUB FORK:
-   Hemos hecho un monton de camfios en nuestro _Git_ local.  
+   Hemos hecho un monton de cambios en nuestro _Git_ local.  
    Confirma los cambios:  
    Ahora haremos PUSH a nuestro _GitHub Fork_:  
 
@@ -142,7 +142,7 @@ GITHUB CONTRIBUTE
 
    * Haz click en él, y crea una _Pull Recuest_.  
 
-   * Recuerda añadir una explicación para los administradores.  
+   * Recuerda añadir una explicación detallada de tus cambios para que los administradores sepan de que se trata.  
 
    * Envia esa _Pull Recuest_.  
 
