@@ -344,4 +344,15 @@ GIT y GITHUB
    > Como es tu propio repositorio, puedes fusionar tu 'pull request' tu mismo.
    La 'pull request' registra los cambios, lo que significa que puede revisarlos mas tarde para averiguar los cambios realizados.
    Para evitar que el repositorio se complique demaciado, puede eliminar la rama que no se utiliza haciendo click en 'delete branch'.
-   Y despues de confirmar (commit) que se han incluido los cambios de la rama anterior, eliminenla.
+   Y despues de confirmar (commit) que se han incluido los cambios de la rama anterior, eliminenla.  
+
+ ## ELIMINAR RAMA REMOTA:
+   Para eliminar una rama remota en git usa el siguiente comando:
+      ~~~ bash
+      git push origin --delete <name-branch> 
+      ~~~
+   Despues de eliminarla, podes ejecutar:
+      ~~~bash
+      git fetch --prune
+      ~~~
+      * Esto limpia las referencias locales a ramas remotas que ya no existen.
